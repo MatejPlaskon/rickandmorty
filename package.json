@@ -1,7 +1,7 @@
 {
-  "name": "mp-notes",
+  "name": "rickandmorty",
   "version": "0.1.0",
-  "homepage": "http://matejplaskon.github.io/mp-notes",
+  "homepage": "http://matejplaskon.github.io/rickandmorty",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
