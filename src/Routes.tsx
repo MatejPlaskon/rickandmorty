@@ -1,9 +1,9 @@
 import {
-  createBrowserRouter,
   createRoutesFromElements,
   Route,
   Routes as RouterRoutes,
   RouterProvider,
+  createHashRouter,
 } from "react-router-dom";
 import { AppLayout } from "./layouts/AppLayout";
 import React from "react";
@@ -21,9 +21,8 @@ const AppRoutes = () => {
   );
 };
 
-const baseRouter = createBrowserRouter(
-  createRoutesFromElements(<Route path={"*"} element={<AppRoutes />}></Route>),
-  { basename: "/rickandmorty" }
+const baseRouter = createHashRouter(
+  createRoutesFromElements(<Route path={"*"} element={<AppRoutes />}></Route>)
 );
 
 export const Routes = () => {
