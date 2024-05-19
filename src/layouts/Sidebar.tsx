@@ -1,5 +1,5 @@
 import { Center, Icon, Stack, Tooltip } from "@chakra-ui/react";
-import { MdPlayCircle } from "react-icons/md";
+import { MdPlayCircle, MdQuestionMark } from "react-icons/md";
 import { IconType } from "react-icons";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -19,11 +19,12 @@ const SidebarItem = ({ to, icon, name }: SidebarItemProps) => {
       <NavLink to={to}>
         <Center
           borderRadius={10}
-          bgColor={isActive ? "blue.400" : "none"}
-          _hover={{ bgColor: "blue.400" }}
+          bgColor={isActive ? "yellow.400" : "none"}
+          _hover={{ bgColor: "yellow.400" }}
           transition={"colors 400ms"}
           p={2}
           m={3}
+          mb={0}
         >
           <Icon as={icon} fontSize={"40px"} color={"white"} />
         </Center>
@@ -34,8 +35,9 @@ const SidebarItem = ({ to, icon, name }: SidebarItemProps) => {
 
 const Sidebar = () => {
   return (
-    <Stack role={"navigation"}>
+    <Stack role={"navigation"} spacing={1}>
       <SidebarItem to={"/episodes"} icon={MdPlayCircle} name={"Episodes"} />
+      <SidebarItem to={"/random"} icon={MdQuestionMark} name={"Random"} />
     </Stack>
   );
 };
