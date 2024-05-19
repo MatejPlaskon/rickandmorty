@@ -1,23 +1,23 @@
-import { AspectRatio, Center } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
-import { episodesSelectors } from "../../modules/episodes";
+import { episodesSelectors, SEASONS } from "../../modules/episodes";
+import { VideoPlayer } from "../../components/VideoPlayer";
+import { EpisodeTitle } from "./EpisodeTitle";
 
 export const EpisodesContent = () => {
   const { selectedSeason, selectedEpisode } = useSelector(
     episodesSelectors.getSelectedEpisodeAndSeason
   );
 
+  const episodeTitle = SEASONS.find((s) => s.season === selectedSeason)
+    ?.episodes[selectedEpisode - 1];
+
+  const title = `S${selectedSeason}E${selectedEpisode}: ${episodeTitle}`;
+
   return (
-    <Center w={"full"} h={"full"} bgColor={"black"}>
-      <AspectRatio w={"90%"} maxW={"100%"} ratio={16 / 9} maxH={"600px"}>
-        <iframe
-          src={`https://vidsrc.to/embed/tv/tt2861424/${selectedSeason}/${selectedEpisode}`}
-          allowFullScreen
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          width={"100%"}
-          height={"100%"}
-        />
-      </AspectRatio>
-    </Center>
+    <Stack w={"full"} h={"full"} alignItems={"center"}>
+      <EpisodeTitle episode={selectedEpisode} season={selectedSeason} />
+      <VideoPlayer season={selectedSeason} episode={selectedEpisode} />
+    </Stack>
   );
 };

@@ -9,6 +9,7 @@ import {
 import { AppLayout } from "./layouts/AppLayout";
 import React from "react";
 import { Episodes } from "./pages/episodes/Episodes";
+import { Random } from "./pages/random/Random";
 
 const AppRoutes = () => {
   return (
@@ -16,7 +17,7 @@ const AppRoutes = () => {
       <RouterRoutes>
         <Route path={"/"}>
           <Route path="episodes" index={true} element={<Episodes />} />
-          <Route path="another" element={<div>another</div>} />
+          <Route path="random" element={<Random />} />
           <Route path={"/"} element={<Navigate replace to={"episodes"} />} />
         </Route>
       </RouterRoutes>

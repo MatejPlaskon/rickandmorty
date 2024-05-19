@@ -9,10 +9,12 @@ type Props = {
 export const AppLayout = ({ children }: Props) => {
   return (
     <Grid gridTemplateColumns={"80px 1fr"} h={"full"} w={"full"}>
-      <GridItem bgColor={"black"}>
+      <GridItem bgColor={"black"} borderRight={"1px solid"}>
         <Sidebar />
       </GridItem>
-      <GridItem>{children}</GridItem>
+      <GridItem w={"full"} h={"full"} bg={"black"}>
+        {children}
+      </GridItem>
     </Grid>
   );
 };
