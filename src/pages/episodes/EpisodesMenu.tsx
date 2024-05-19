@@ -38,7 +38,7 @@ export const EpisodesMenu = () => {
       <Heading size={"sm"} p={2} pt={6} color={"yellow.600"}>
         Choose episode
       </Heading>
-      <Accordion borderColor={"yellow.500"}>
+      <Accordion borderColor={"yellow.500"} defaultIndex={selectedSeason - 1}>
         {SEASONS.map((season) => (
           <AccordionItem key={season.season}>
             <h2>
