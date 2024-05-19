@@ -23,7 +23,7 @@ const AppRoutes = () => {
 
 const baseRouter = createBrowserRouter(
   createRoutesFromElements(<Route path={"*"} element={<AppRoutes />}></Route>),
-  { basename: "/mp-notes" }
+  { basename: "/rickandmorty" }
 );
 
 export const Routes = () => {
