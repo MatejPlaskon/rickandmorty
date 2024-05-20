@@ -1,9 +1,18 @@
 import { VideoPlayer } from "../../components/VideoPlayer";
 import { SEASONS } from "../../modules/episodes";
 import { useCallback, useEffect, useState } from "react";
-import { Center, Heading, HStack, Icon, IconButton } from "@chakra-ui/react";
+import {
+  Center,
+  Heading,
+  HStack,
+  Icon,
+  IconButton,
+  Stack,
+  Tooltip,
+} from "@chakra-ui/react";
 import { MdRefresh } from "react-icons/md";
 import { EpisodeTitle } from "../episodes/EpisodeTitle";
+import { PageLayout } from "../../layouts/PageLayout";
 
 const getRandomNumber = (max: number) => {
   return Math.floor(Math.random() * max) + 1;
@@ -41,22 +50,29 @@ export const Random = () => {
   }, [getEpisodeData]);
 
   return (
-    <Center w={"full"} h={"full"} p={4} flexDirection={"column"}>
-      <HStack mb={2}>
-        <Heading color={"yellow.500"}>Watch Random Episode</Heading>
-        <IconButton
-          aria-label={"Random episode"}
-          icon={<Icon as={MdRefresh} fontSize={"40px"} />}
-          onClick={refreshEpisode}
-          rounded={"full"}
-          bgColor={"black"}
-          _hover={{ bgColor: "yellow.100" }}
-          color={"yellow.500"}
-          isLoading={isLoading}
-        />
-      </HStack>
-      <EpisodeTitle episode={data.episode} season={data.season} />
+    <PageLayout
+      header={
+        <HStack alignItems={"center"} w={"full"} wrap={"wrap"}>
+          <Heading color={"blue.500"} mr={2}>
+            Random Episode
+          </Heading>
+          <EpisodeTitle episode={data.episode} season={data.season} />
+          <Tooltip label={"Select another episode"}>
+            <IconButton
+              aria-label={"Random episode"}
+              icon={<Icon as={MdRefresh} fontSize={"40px"} />}
+              onClick={refreshEpisode}
+              rounded={"full"}
+              bgColor={"black"}
+              _hover={{ bgColor: "yellow.100" }}
+              color={"yellow.500"}
+              isLoading={isLoading}
+            />
+          </Tooltip>
+        </HStack>
+      }
+    >
       <VideoPlayer season={data.season} episode={data.episode} />
-    </Center>
+    </PageLayout>
   );
 };

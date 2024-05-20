@@ -42,7 +42,7 @@ const Sidebar = () => {
   return (
     <Stack role={"navigation"} spacing={1}>
       <SidebarItem to={"/episodes"} icon={MdPlayCircle} name={"Episodes"} />
-      <SidebarItem to={"/random"} icon={FaRandom} name={"Random"} />
+      <SidebarItem to={"/random"} icon={FaRandom} name={"Random episode"} />
     </Stack>
   );
 };
