@@ -1,15 +1,7 @@
 import { VideoPlayer } from "../../components/VideoPlayer";
 import { SEASONS } from "../../modules/episodes";
 import { useCallback, useEffect, useState } from "react";
-import {
-  Center,
-  Heading,
-  HStack,
-  Icon,
-  IconButton,
-  Stack,
-  Tooltip,
-} from "@chakra-ui/react";
+import { Heading, HStack, Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { MdRefresh } from "react-icons/md";
 import { EpisodeTitle } from "../episodes/EpisodeTitle";
 import { PageLayout } from "../../layouts/PageLayout";
