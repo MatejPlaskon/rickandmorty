@@ -48,7 +48,8 @@ export const EpisodesMenu = () => {
                 <AccordionButton>
                   <Box as="span" flex="1" textAlign="left">
                     <Text
-                      color={"yellow.500"}
+                      color={"teal.500"}
+                      fontWeight={"medium"}
                     >{`Season ${season.season}`}</Text>
                   </Box>
                   <AccordionIcon color={"yellow.500"} />
