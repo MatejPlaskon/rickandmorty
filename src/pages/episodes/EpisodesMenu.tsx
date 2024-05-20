@@ -16,20 +16,33 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   episodesSelectors,
   setSelectedEpisode,
-  setSelectedSeason,
   SEASONS,
 } from "../../modules/episodes";
+import { LocalStorageData, useLocalStorage } from "../../hooks/useLocalStorage";
+import { useEffect } from "react";
 
 export const EpisodesMenu = () => {
   const dispatch = useDispatch();
+
+  const [storageValue, setStorageValue] = useLocalStorage<{
+    season: number;
+    episode: number;
+  }>(LocalStorageData.SelectedEpisode);
+
+  useEffect(() => {
+    if (storageValue.season && storageValue.episode) {
+      const { season, episode } = storageValue;
+      dispatch(setSelectedEpisode({ season, episode }));
+    }
+  }, []);
 
   const { selectedSeason, selectedEpisode } = useSelector(
     episodesSelectors.getSelectedEpisodeAndSeason
   );
 
   const handleClick = (episode: number, season: number) => {
-    dispatch(setSelectedSeason(season));
-    dispatch(setSelectedEpisode(episode));
+    dispatch(setSelectedEpisode({ season, episode }));
+    setStorageValue({ season, episode });
   };
 
   const isSelected = (episode: number, season: number) =>
@@ -41,7 +54,10 @@ export const EpisodesMenu = () => {
         <Heading size={"sm"} p={2} pt={6} color={"yellow.500"}>
           Choose episode
         </Heading>
-        <Accordion borderColor={"yellow.500"} defaultIndex={selectedSeason - 1}>
+        <Accordion
+          borderColor={"yellow.500"}
+          defaultIndex={storageValue.season - 1 || selectedSeason - 1}
+        >
           {SEASONS.map((season) => (
             <AccordionItem key={season.season}>
               <h2>

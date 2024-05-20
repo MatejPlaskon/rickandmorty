@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce045620-2147-49e1-bf07-d9fd71055e91" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hooks/useLocalStorage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/episodes/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/episodes/slice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/episodes/EpisodesMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/episodes/EpisodesMenu.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +83,7 @@
       <workItem from="1687806196501" duration="138000" />
       <workItem from="1687806392979" duration="1947000" />
       <workItem from="1698046051358" duration="735000" />
-      <workItem from="1716106224932" duration="32474000" />
+      <workItem from="1716106224932" duration="34932000" />
     </task>
     <servers />
   </component>
