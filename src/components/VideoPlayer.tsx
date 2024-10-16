@@ -7,8 +7,8 @@ type Props = {
 
 export const VideoPlayer = ({ season, episode }: Props) => {
   return (
-    <Center w={"full"} h={"full"}>
-      <AspectRatio w={"90%"} maxH={"100%"} maxW={"100%"} ratio={16 / 9}>
+    <Center>
+      <AspectRatio w={"90%"} maxH={"calc(100vh - 150px)"} ratio={16 / 9}>
         <iframe
           src={`https://vidsrc.to/embed/tv/tt2861424/${season}/${episode}`}
           allowFullScreen

@@ -45,10 +45,6 @@ export const Random = () => {
     <PageLayout
       header={
         <HStack alignItems={"center"} w={"full"} wrap={"wrap"}>
-          <Heading color={"blue.500"} mr={2}>
-            Random Episode
-          </Heading>
-          <EpisodeTitle episode={data.episode} season={data.season} />
           <Tooltip label={"Select another episode"}>
             <IconButton
               aria-label={"Random episode"}
@@ -61,6 +57,10 @@ export const Random = () => {
               isLoading={isLoading}
             />
           </Tooltip>
+          <Heading color={"blue.500"} mr={2}>
+            Random Episode
+          </Heading>
+          <EpisodeTitle episode={data.episode} season={data.season} />
         </HStack>
       }
     >

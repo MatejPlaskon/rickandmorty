@@ -8,7 +8,12 @@ type Props = {
 
 export const AppLayout = ({ children }: Props) => {
   return (
-    <Grid gridTemplateColumns={"80px 1fr"} h={"full"} w={"full"}>
+    <Grid
+      gridTemplateColumns={"80px 1fr"}
+      h={"full"}
+      w={"full"}
+      overflow={"hidden"}
+    >
       <GridItem
         bgColor={"black"}
         borderRight={"1px solid"}
@@ -16,7 +21,7 @@ export const AppLayout = ({ children }: Props) => {
       >
         <Sidebar />
       </GridItem>
-      <GridItem w={"full"} h={"full"} bg={"black"}>
+      <GridItem w={"full"} h={"full"} bg={"black"} overflow={"hidden"}>
         {children}
       </GridItem>
     </Grid>
