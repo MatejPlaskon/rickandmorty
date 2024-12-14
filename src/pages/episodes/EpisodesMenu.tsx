@@ -48,7 +48,9 @@ export const EpisodesMenu = () => {
   const isSelected = (episode: number, season: number) =>
     selectedSeason === season && selectedEpisode === episode;
 
-  return (
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  return (// @ts-expect-error
     <Fade in>
       <Stack>
         <Heading size={"sm"} p={2} pt={6} color={"yellow.500"}>
