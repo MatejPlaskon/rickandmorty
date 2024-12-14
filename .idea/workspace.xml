@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce045620-2147-49e1-bf07-d9fd71055e91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/Episodes-D-qMO4w6.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/Episodes-DB9jPRqb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/PageLayout-0ogqSnf9.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/PageLayout-AMTDda3z.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/Random-BrR3DMzi.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/Random-CkArOVVP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/index-De7XSiMu.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/index-DkObs92j.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
