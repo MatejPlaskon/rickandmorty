@@ -58,7 +58,7 @@ const Random = () => {
             />
           </Tooltip>
           <Heading color={"blue.500"} mr={2}>
-            Random Episode HELLO
+            Random Episode
           </Heading>
           <EpisodeTitle episode={data.episode} season={data.season} />
         </HStack>
