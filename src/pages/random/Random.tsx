@@ -1,10 +1,10 @@
-import { VideoPlayer } from "../../components/VideoPlayer";
+import VideoPlayer from "../../components/VideoPlayer";
 import { SEASONS } from "../../modules/episodes";
 import { useCallback, useEffect, useState } from "react";
 import { Heading, HStack, Icon, IconButton, Tooltip } from "@chakra-ui/react";
 import { MdRefresh } from "react-icons/md";
 import { EpisodeTitle } from "../episodes/EpisodeTitle";
-import { PageLayout } from "../../layouts/PageLayout";
+import PageLayout from "../../layouts/PageLayout";
 
 const getRandomNumber = (max: number) => {
   return Math.floor(Math.random() * max) + 1;
@@ -20,7 +20,7 @@ const getRandomEpisode = () => {
   return { season: randomSeason, episode: randomEpisode };
 };
 
-export const Random = () => {
+const Random = () => {
   const [data, setData] = useState({ season: 1, episode: 1 });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -68,3 +68,5 @@ export const Random = () => {
     </PageLayout>
   );
 };
+
+export default Random;

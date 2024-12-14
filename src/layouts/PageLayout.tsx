@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 import { HStack, Image, Stack } from "@chakra-ui/react";
 import logo from "../assets/logo.png";
 
@@ -7,7 +7,7 @@ type Props = {
   header: ReactNode;
 };
 
-export const PageLayout = ({ children, header }: Props) => {
+const PageLayout = ({ children, header }: Props) => {
   return (
     <Stack w={"full"} h={"full"} p={4}>
       <HStack w={"full"} spacing={5}>
@@ -18,3 +18,5 @@ export const PageLayout = ({ children, header }: Props) => {
     </Stack>
   );
 };
+
+export default memo(PageLayout);

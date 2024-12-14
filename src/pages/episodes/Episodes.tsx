@@ -4,7 +4,7 @@ import { EpisodesContent } from "./EpisodesContent";
 import { useEffect } from "react";
 import { redirect } from "react-router-dom";
 
-export const Episodes = () => {
+const Episodes = () => {
   useEffect(() => {
     redirect("/episodes");
   });
@@ -15,3 +15,5 @@ export const Episodes = () => {
     </EpisodesLayout>
   );
 };
+
+export default Episodes;

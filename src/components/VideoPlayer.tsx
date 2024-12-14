@@ -1,11 +1,12 @@
 import { AspectRatio, Center } from "@chakra-ui/react";
+import { memo } from "react";
 
 type Props = {
   season: number;
   episode: number;
 };
 
-export const VideoPlayer = ({ season, episode }: Props) => {
+const VideoPlayer = ({ season, episode }: Props) => {
   return (
     <Center>
       <AspectRatio w={"90%"} maxH={"calc(100vh - 150px)"} ratio={16 / 9}>
@@ -19,3 +20,5 @@ export const VideoPlayer = ({ season, episode }: Props) => {
     </Center>
   );
 };
+
+export default memo(VideoPlayer);

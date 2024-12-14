@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { episodesSelectors } from "../../modules/episodes";
-import { VideoPlayer } from "../../components/VideoPlayer";
+import VideoPlayer from "../../components/VideoPlayer";
 import { EpisodeTitle } from "./EpisodeTitle";
 
-import { PageLayout } from "../../layouts/PageLayout";
+import PageLayout from "../../layouts/PageLayout";
 
 export const EpisodesContent = () => {
   const { selectedSeason, selectedEpisode } = useSelector(
