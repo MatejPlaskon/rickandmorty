@@ -2,7 +2,7 @@
   "name": "rickandmorty",
   "version": "0.1.0",
   "type": "module",
-  "homepage": "http://matejplaskon.github.io/rickandmorty",
+  "homepage": "https://matejplaskon.github.io/rickandmorty",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
@@ -29,7 +29,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
