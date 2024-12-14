@@ -29,7 +29,7 @@ const AppRoutes = () => {
 };
 
 const baseRouter = createHashRouter(
-  createRoutesFromElements(<Route path={"*"} element={<AppRoutes />}></Route>)
+  createRoutesFromElements(<Route path={"*"} element={<AppRoutes />}></Route>),
 );
 
 export const Routes = () => {

@@ -37,7 +37,7 @@ export const EpisodesMenu = () => {
   }, []);
 
   const { selectedSeason, selectedEpisode } = useSelector(
-    episodesSelectors.getSelectedEpisodeAndSeason
+    episodesSelectors.getSelectedEpisodeAndSeason,
   );
 
   const handleClick = (episode: number, season: number) => {
@@ -48,9 +48,9 @@ export const EpisodesMenu = () => {
   const isSelected = (episode: number, season: number) =>
     selectedSeason === season && selectedEpisode === episode;
 
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  return (// @ts-expect-error
+  return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     <Fade in>
       <Stack>
         <Heading size={"sm"} p={2} pt={6} color={"yellow.500"}>
@@ -59,6 +59,7 @@ export const EpisodesMenu = () => {
         <Accordion
           borderColor={"yellow.500"}
           defaultIndex={storageValue.season - 1 || selectedSeason - 1}
+          reduceMotion
         >
           {SEASONS.map((season) => (
             <AccordionItem key={season.season}>

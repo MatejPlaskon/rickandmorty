@@ -7,7 +7,7 @@ import PageLayout from "../../layouts/PageLayout";
 
 export const EpisodesContent = () => {
   const { selectedSeason, selectedEpisode } = useSelector(
-    episodesSelectors.getSelectedEpisodeAndSeason
+    episodesSelectors.getSelectedEpisodeAndSeason,
   );
 
   return (

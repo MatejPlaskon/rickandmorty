@@ -1,6 +1,6 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Routes } from "./Routes";
-import './App.css';
+import "./App.css";
 
 const config = {
   initialColorMode: "dark",

@@ -6,7 +6,7 @@ export enum LocalStorageData {
 
 export const useLocalStorage = <T extends object>(
   key: LocalStorageData,
-  initialValue = {} as T
+  initialValue = {} as T,
 ): [T, Dispatch<T>] => {
   const getStorageValue = (): T => {
     const item = window.localStorage.getItem(key);
@@ -35,7 +35,7 @@ export const useLocalStorage = <T extends object>(
         setValue(JSON.parse(event.newValue) || initialValue);
       }
     },
-    [key, initialValue, value]
+    [key, initialValue, value],
   );
 
   useEffect(() => {

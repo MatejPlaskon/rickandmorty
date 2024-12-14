@@ -14,7 +14,7 @@ const episodesSlice = createSlice({
   reducers: {
     setSelectedEpisode(
       state,
-      { payload }: PayloadAction<{ season: number; episode: number }>
+      { payload }: PayloadAction<{ season: number; episode: number }>,
     ) {
       state.selectedSeason = payload.season;
       state.selectedEpisode = payload.episode;
@@ -32,7 +32,7 @@ const getSelectedEpisodeAndSeason = createSelector(
   (selectedEpisode, selectedSeason) => ({
     selectedEpisode,
     selectedSeason,
-  })
+  }),
 );
 
 export const episodesSelectors = {
