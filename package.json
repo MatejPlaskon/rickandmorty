@@ -5,7 +5,7 @@
   "homepage": "https://matejplaskon.github.io/rickandmorty",
   "private": true,
   "dependencies": {
-    "@chakra-ui/react": "^2.10.4",
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@reduxjs/toolkit": "^2.5.0",
