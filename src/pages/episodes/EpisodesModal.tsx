@@ -10,7 +10,7 @@ export const EpisodesModal = ({ isOpen, onClose }: ModalProps) => {
 	return (
 		<Modal isOpen={isOpen} onClose={onClose}>
 			<ModalOverlay />
-			<ModalContent borderRadius={'12px'}>
+			<ModalContent borderRadius={'12px'} borderWidth={'3px'} borderColor={'blue.800'} bgColor={'black'}>
 				<ModalBody>
 					<EpisodesMenu onSelect={onClose} />
 				</ModalBody>

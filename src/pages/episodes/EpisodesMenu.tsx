@@ -66,27 +66,29 @@ export const EpisodesMenu = ({ onSelect }: Props) => {
 								</AccordionButton>
 							</h2>
 							<AccordionPanel px={0}>
-								{season.episodes.map((e, index) => (
-									<Tooltip label={e} key={index} placement={'right'}>
-										<Flex
-											role={'button'}
-											onClick={() => handleClick(index + 1, season.season)}
-											p={1}
-											px={4}
-											borderRadius={5}
-											w={'full'}
-											key={index}
-											bgColor={isSelected(index + 1, season.season) ? 'gray.700' : 'black'}
-											wordBreak={'break-all'}
-											_hover={{ bgColor: 'gray.700' }}
-											color={'yellow.400'}
-											overflow={'hidden'}
-											noOfLines={1}
-										>
-											{`Episode ${index + 1}: ${e}`}
-										</Flex>
-									</Tooltip>
-								))}
+								<Stack gap={'1px'}>
+									{season.episodes.map((e, index) => (
+										<Tooltip label={e} key={index} placement={'right'}>
+											<Flex
+												role={'button'}
+												onClick={() => handleClick(index + 1, season.season)}
+												p={1}
+												px={4}
+												borderRadius={5}
+												w={'full'}
+												key={index}
+												bgColor={isSelected(index + 1, season.season) ? 'gray.700' : 'black'}
+												wordBreak={'break-all'}
+												_hover={{ bgColor: 'gray.700' }}
+												color={'yellow.400'}
+												overflow={'hidden'}
+												noOfLines={1}
+											>
+												{`Episode ${index + 1}: ${e}`}
+											</Flex>
+										</Tooltip>
+									))}
+								</Stack>
 							</AccordionPanel>
 						</AccordionItem>
 					))}
