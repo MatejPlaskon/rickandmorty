@@ -27,7 +27,7 @@ const Random = () => {
   const getEpisodeData = useCallback(() => {
     const { season, episode } = getRandomEpisode();
     setData({ season, episode });
-  }, [setData, getRandomEpisode]);
+  }, [setData]);
 
   const refreshEpisode = () => {
     setIsLoading(true);

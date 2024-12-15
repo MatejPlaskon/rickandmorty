@@ -90,6 +90,7 @@ export const EpisodesMenu = () => {
                           ? "gray.700"
                           : "black"
                       }
+                      wordBreak={'break-all'}
                       _hover={{ bgColor: "gray.700" }}
                       color={"yellow.400"}
                       overflow={"hidden"}
