@@ -1,4 +1,4 @@
-import { Grid, GridItem, Icon, IconButton, Tooltip } from '@chakra-ui/react'
+import { Grid, GridItem, Icon, IconButton } from '@chakra-ui/react'
 import { ReactNode, useState } from 'react'
 import { MdMenu } from 'react-icons/md'
 import { useMobileDevice } from '../../hooks/useMobileDevice.tsx'
