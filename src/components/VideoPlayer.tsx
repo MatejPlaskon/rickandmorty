@@ -11,7 +11,7 @@ const VideoPlayer = ({ season, episode }: Props) => {
 		<Center>
 			<Box
 				w={"full"}
-				maxH={"calc(100vh - 150px)"}
+				maxW={"calc((100vh - 150px) * 16 / 9)"}
 				borderRadius={"12px"}
 				overflow={"hidden"}
 				border={"1px solid rgba(76, 175, 80, 0.1)"}
