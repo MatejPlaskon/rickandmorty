@@ -1,19 +1,12 @@
-import { EpisodesLayout } from "./EpisodesLayout";
-import { EpisodesMenu } from "./EpisodesMenu";
-import { EpisodesContent } from "./EpisodesContent";
-import { useEffect } from "react";
-import { redirect } from "react-router-dom";
+import { Box } from "@chakra-ui/react"
+import { EpisodesContent } from "./EpisodesContent"
 
 const Episodes = () => {
-  useEffect(() => {
-    redirect("/episodes");
-  });
+	return (
+		<Box w={"full"} h={"full"} overflow={"auto"} px={{ base: 4, md: 8 }} py={4}>
+			<EpisodesContent />
+		</Box>
+	)
+}
 
-  return (
-    <EpisodesLayout sidebar={<EpisodesMenu />}>
-      {<EpisodesContent />}
-    </EpisodesLayout>
-  );
-};
-
-export default Episodes;
+export default Episodes

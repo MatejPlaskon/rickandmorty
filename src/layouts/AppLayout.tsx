@@ -1,29 +1,18 @@
-import { Grid, GridItem } from "@chakra-ui/react";
-import Sidebar from "./Sidebar";
-import { ReactNode } from "react";
+import { Box } from "@chakra-ui/react"
+import { ReactNode } from "react"
+import TopNav from "./TopNav"
 
 type Props = {
-  children: ReactNode;
-};
+	children: ReactNode
+}
 
 export const AppLayout = ({ children }: Props) => {
-  return (
-    <Grid
-      gridTemplateColumns={"80px 1fr"}
-      h={"full"}
-      w={"full"}
-      overflow={"hidden"}
-    >
-      <GridItem
-        bgColor={"black"}
-        borderRight={"1px solid"}
-        borderColor={"blue.800"}
-      >
-        <Sidebar />
-      </GridItem>
-      <GridItem w={"full"} h={"full"} bg={"black"} overflow={"hidden"}>
-        {children}
-      </GridItem>
-    </Grid>
-  );
-};
+	return (
+		<Box h={"full"} w={"full"} overflow={"hidden"} position={"relative"} zIndex={1}>
+			<TopNav />
+			<Box h={"calc(100vh - 56px)"} overflow={"auto"}>
+				{children}
+			</Box>
+		</Box>
+	)
+}

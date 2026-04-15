@@ -1,12 +1,14 @@
 html {
-  height: 100vh;
+	height: 100vh;
 }
 
 body {
-  height: 100vh;
-  background: black;
+	height: 100vh;
+	background: linear-gradient(180deg, #0a0f0a 0%, #111a11 50%, #0a0f0a 100%);
+	background-attachment: fixed;
 }
 
 #root {
-  height: 100vh;
+	height: 100vh;
+	position: relative;
 }
