@@ -2,8 +2,9 @@ import { useSelector, useDispatch } from "react-redux"
 import { episodesSelectors, setSelectedEpisode, SEASONS } from "../../modules/episodes"
 import { LocalStorageData, useLocalStorage } from "../../hooks/useLocalStorage"
 import VideoPlayer from "../../components/VideoPlayer"
-import { Box, Flex, Heading, HStack, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react"
 import { useEffect } from "react"
+import thumbnail from "../../assets/thumbnail.png"
 
 export const EpisodesContent = () => {
 	const dispatch = useDispatch()
@@ -104,18 +105,32 @@ export const EpisodesContent = () => {
 							onClick={() => handleSelect(episodeNum, selectedSeason)}
 							textAlign={"left"}
 						>
-							{/* Episode Number */}
+							{/* Episode Thumbnail */}
 							<Flex
-								h={{ base: "70px", md: "80px" }}
-								bg={isActive ? "rgba(76, 175, 80, 0.06)" : "rgba(0, 0, 0, 0.2)"}
+								h={{ base: "80px", md: "90px" }}
+								position={"relative"}
+								overflow={"hidden"}
 								align={"center"}
 								justify={"center"}
-								position={"relative"}
 							>
+								<Image
+									src={thumbnail}
+									alt={""}
+									position={"absolute"}
+									inset={0}
+									w={"full"}
+									h={"full"}
+									objectFit={"cover"}
+									opacity={isActive ? 0.7 : 0.3}
+									transition={"opacity 200ms"}
+								/>
 								<Text
 									fontSize={"2xl"}
 									fontWeight={"bold"}
-									color={isActive ? "portal.green" : "rgba(102, 187, 106, 0.15)"}
+									color={"white"}
+									textShadow={"0 1px 4px rgba(0, 0, 0, 0.8)"}
+									position={"relative"}
+									zIndex={1}
 								>
 									{String(episodeNum).padStart(2, "0")}
 								</Text>
@@ -128,6 +143,7 @@ export const EpisodesContent = () => {
 										h={"6px"}
 										borderRadius={"full"}
 										bg={"portal.green"}
+										zIndex={1}
 									/>
 								)}
 							</Flex>
